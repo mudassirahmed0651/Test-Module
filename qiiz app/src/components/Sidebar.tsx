@@ -21,20 +21,21 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className={`h-screen bg-teal-600 text-white transition-all duration-300 flex flex-col ${isCollapsed ? 'w-20' : 'w-64'}`}>
+        <div className={`h-screen bg-brand-blue-500 text-white transition-all
+        rounded-r-4xl duration-300 flex flex-col ${isCollapsed ? 'w-20' : 'w-64'}`}>
             {/* Logo Section */}
             <div className="p-4 flex items-center gap-3">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                    <img src="/src/assets/react.svg" alt="logo" className="w-8 h-8" />
+                    <img src="/src/assets/logo.png" alt="logo" />
                 </div>
-                {!isCollapsed && <span className="font-semibold text-lg truncate">karachipublicschool</span>}
+                {!isCollapsed && <span className="font-semibold text-lg truncate uppercase tracking-wider">MY TUTOR HELP</span>}
             </div>
 
             {/* Toggle Button */}
             <div className="px-4 mb-6">
                 <button
                     onClick={() => setIsCollapsed(!isCollapsed)}
-                    className="w-full bg-teal-500/50 hover:bg-teal-500 py-1 rounded flex items-center justify-center transition-colors"
+                    className="w-full bg-brand-blue-400/50 hover:bg-brand-blue-400 py-1 rounded-xl flex items-center justify-center transition-colors shadow-sm"
                 >
                     <ChevronLeft className={`w-5 h-5 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`} />
                 </button>
@@ -46,13 +47,13 @@ const Sidebar = () => {
                     <div key={index} className="group">
                         <a
                             href="#"
-                            className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${item.active ? 'bg-teal-700' : 'hover:bg-teal-500/30'}`}
+                            className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${item.active ? 'bg-brand-blue-700 shadow-lg' : 'hover:bg-brand-blue-400/30'}`}
                         >
-                            <item.icon className="w-5 h-5 min-w-[20px]" />
+                            <item.icon className={`w-5 h-5 min-w-[20px] ${item.active ? 'text-white' : 'text-brand-blue-100 group-hover:text-white'}`} />
                             {!isCollapsed && (
                                 <div className="flex-1 flex items-center justify-between overflow-hidden">
-                                    <span className="truncate">{item.label}</span>
-                                    {item.hasSubmenu && <ChevronDown className="w-4 h-4" />}
+                                    <span className={`truncate font-medium ${item.active ? 'text-white' : 'text-brand-blue-50 group-hover:text-white'}`}>{item.label}</span>
+                                    {item.hasSubmenu && <ChevronDown className="w-4 h-4 opacity-50" />}
                                 </div>
                             )}
                         </a>

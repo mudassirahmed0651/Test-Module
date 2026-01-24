@@ -15,7 +15,7 @@ const QuizSection = () => {
                     {['Karachi', 'Lahore', 'Islamabad', 'Quetta'].map((option, idx) => (
                         <button
                             key={idx}
-                            className="w-full text-left p-4 rounded-xl border-2 border-gray-100 hover:border-teal-500 hover:bg-teal-50 transition-all flex items-center gap-4"
+                            className="w-full text-left p-4 rounded-xl border-2 border-gray-100 hover:border-brand-blue-400 hover:bg-brand-blue-50 transition-all flex items-center gap-4"
                         >
                             <span className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm font-medium">
                                 {String.fromCharCode(65 + idx)}
@@ -29,7 +29,7 @@ const QuizSection = () => {
                     <button className="px-6 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors">
                         Previous
                     </button>
-                    <button className="px-8 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">
+                    <button className="px-8 py-2 bg-brand-blue-500 text-white rounded-lg hover:bg-brand-blue-600 transition-colors">
                         Next
                     </button>
                 </div>
