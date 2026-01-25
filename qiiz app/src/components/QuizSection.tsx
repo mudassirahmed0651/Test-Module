@@ -2,8 +2,8 @@
 
 const QuizSection = () => {
     return (
-        <div className="max-w-4xl mx-auto py-10 px-6">
-            <div className="bg-white rounded-2xl shadow-sm p-8 text-gray-800">
+        <div className="max-w-4xl w-full mx-auto py-10 px-6">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-10 text-gray-800 border border-white/20">
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-6">Question 1 of 10</h2>
                     <p className="text-lg leading-relaxed">
